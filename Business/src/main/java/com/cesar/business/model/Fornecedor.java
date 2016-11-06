@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cesar;
+package com.cesar.business.model;
+
+import java.io.Serializable;
 
 /**
  *
  * @author cesar
  */
-public class Fornecedor {
+public class Fornecedor implements Serializable{
 
     private long id;
     private String razaoSocial;

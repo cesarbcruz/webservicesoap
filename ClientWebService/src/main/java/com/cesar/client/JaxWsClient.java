@@ -4,14 +4,7 @@ import com.cesar.CadastroProvider;
 import com.cesar.CadastroProviderService;
 import com.cesar.Fornecedor;
 import com.cesar.Retorno;
-import java.net.URL;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javax.xml.namespace.QName;
 import javax.xml.ws.BindingProvider;
-import javax.xml.ws.handler.MessageContext;
 
 /**
  * Hello world!
@@ -23,21 +16,13 @@ public class JaxWsClient {
 
         try {
 
-            URL url = new URL("http://localhost:8080/WebService/cadastroProvider?wsdl");
-
-            QName qName = new QName("http://cesar.com/", "CadastroProviderService");
-
-            CadastroProviderService service = new CadastroProviderService(url, qName);
+            CadastroProviderService service = new CadastroProviderService();
 
             CadastroProvider port = service.getCadastroProviderPort();
 
-            BindingProvider provider = (BindingProvider) port;
-            Map<String, Object> req_ctx = provider.getRequestContext();
-
-            Map<String, List<String>> headers = new HashMap<String, List<String>>();
-            headers.put("usuario", Collections.singletonList("cesar"));
-            headers.put("senha", Collections.singletonList("123456"));
-            req_ctx.put(MessageContext.HTTP_REQUEST_HEADERS, headers);
+            BindingProvider bp = (BindingProvider) port;
+            bp.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, "wscovabra");
+            bp.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, "pa33Lx$k");
 
             Fornecedor f = new Fornecedor();
             f.setId(100);

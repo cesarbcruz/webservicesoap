@@ -1,0 +1,54 @@
+<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://cesar.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="CadastroProviderService" targetNamespace="http://cesar.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://cesar.com/" version="1.0">
+
+  <xs:complexType name="fornecedor">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="razaoSocial" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="retorno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mensagem" type="xs:string"></xs:element>
+      <xs:element name="status" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="cadFornecedor">
+    <wsdl:part name="fornecedor" type="tns:fornecedor">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cadFornecedorResponse">
+    <wsdl:part name="return" type="tns:retorno">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CadastroProvider">
+    <wsdl:operation name="cadFornecedor">
+      <wsdl:input message="tns:cadFornecedor" name="cadFornecedor">
+    </wsdl:input>
+      <wsdl:output message="tns:cadFornecedorResponse" name="cadFornecedorResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CadastroProviderServiceSoapBinding" type="tns:CadastroProvider">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="cadFornecedor">
+      <soap:operation soapAction="" style="rpc"></soap:operation>
+      <wsdl:input name="cadFornecedor">
+        <soap:body namespace="http://cesar.com/" use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="cadFornecedorResponse">
+        <soap:body namespace="http://cesar.com/" use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CadastroProviderService">
+    <wsdl:port binding="tns:CadastroProviderServiceSoapBinding" name="CadastroProviderPort">
+      <soap:address location="http://localhost:8080/WebService/CadastroProvider"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
