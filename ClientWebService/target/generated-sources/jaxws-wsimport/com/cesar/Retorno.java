@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de retorno complex type.
+ * <p>Java class for retorno complex type.
  * 
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="retorno">
@@ -37,7 +37,7 @@ public class Retorno {
     protected int status;
 
     /**
-     * Obtém o valor da propriedade mensagem.
+     * Gets the value of the mensagem property.
      * 
      * @return
      *     possible object is
@@ -49,7 +49,7 @@ public class Retorno {
     }
 
     /**
-     * Define o valor da propriedade mensagem.
+     * Sets the value of the mensagem property.
      * 
      * @param value
      *     allowed object is
@@ -61,7 +61,7 @@ public class Retorno {
     }
 
     /**
-     * Obtém o valor da propriedade status.
+     * Gets the value of the status property.
      * 
      */
     public int getStatus() {
@@ -69,7 +69,7 @@ public class Retorno {
     }
 
     /**
-     * Define o valor da propriedade status.
+     * Sets the value of the status property.
      * 
      */
     public void setStatus(int value) {

@@ -27,7 +27,7 @@ public class CadastroProvider {
     public Retorno cadFornecedor(@WebParam(name = "fornecedor") Fornecedor fornecedor) {
         try {
 
-            return proxy.getBusinessBean().cadFornecedor(fornecedor);
+            return proxy.getbBusinessBean().cadFornecedor(fornecedor);
 
         } catch (Exception ex) {
             return criarRetornoErroSistemico(ex);

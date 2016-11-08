@@ -3,25 +3,11 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <display-name>Archetype Created Web Application</display-name>
-  
-
-    <listener>
-        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
-    </listener>
-    <servlet>
-        <servlet-name>cadastroProvider</servlet-name>
-        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>cadastroProvider</servlet-name>
-        <url-pattern>/cadastroProvider</url-pattern>
-    </servlet-mapping>
-    
+    <display-name>Web Service WMS</display-name>
+     
     <security-constraint>
         <web-resource-collection>
-            <web-resource-name>WsCovabra</web-resource-name>
+            <web-resource-name>ERP-ws</web-resource-name>
             <url-pattern>/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>

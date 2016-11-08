@@ -21,8 +21,8 @@ public class JaxWsClient {
             CadastroProvider port = service.getCadastroProviderPort();
 
             BindingProvider bp = (BindingProvider) port;
-            bp.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, "wscovabra");
-            bp.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, "pa33Lx$k");
+            bp.getRequestContext().put(BindingProvider.USERNAME_PROPERTY, "appuser");
+            bp.getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, "password");
 
             Fornecedor f = new Fornecedor();
             f.setId(100);

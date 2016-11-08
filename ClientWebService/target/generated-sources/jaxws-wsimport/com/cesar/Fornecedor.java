@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de fornecedor complex type.
+ * <p>Java class for fornecedor complex type.
  * 
- * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="fornecedor">
@@ -37,7 +37,7 @@ public class Fornecedor {
     protected String razaoSocial;
 
     /**
-     * Obtém o valor da propriedade id.
+     * Gets the value of the id property.
      * 
      */
     public long getId() {
@@ -45,7 +45,7 @@ public class Fornecedor {
     }
 
     /**
-     * Define o valor da propriedade id.
+     * Sets the value of the id property.
      * 
      */
     public void setId(long value) {
@@ -53,7 +53,7 @@ public class Fornecedor {
     }
 
     /**
-     * Obtém o valor da propriedade razaoSocial.
+     * Gets the value of the razaoSocial property.
      * 
      * @return
      *     possible object is
@@ -65,7 +65,7 @@ public class Fornecedor {
     }
 
     /**
-     * Define o valor da propriedade razaoSocial.
+     * Sets the value of the razaoSocial property.
      * 
      * @param value
      *     allowed object is
